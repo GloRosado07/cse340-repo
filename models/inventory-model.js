@@ -67,6 +67,8 @@ async function checkExistingClassification(classification_name) {
   }
 }
 
+//UP TO HERE WEEK 3//
+
 module.exports = {getClassifications, getInventoryByClassificationId, getCarDetailsByInvId
   , addClassification, checkExistingClassification
 };

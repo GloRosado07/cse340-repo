@@ -135,6 +135,8 @@ function createScreenName(firstname, lastname) {
   return firstname.charAt(0).toUpperCase() + lastname.charAt(0).toUpperCase() + lastname.slice(1)
 }
 
+//UP TO HERE WEEK 3//
+
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
