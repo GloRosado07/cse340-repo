@@ -4,7 +4,6 @@ const router = new express.Router()
 const utilities = require("../utilities/")
 const accountController = require("../controllers/accountController")
 
-
 /*  **********************************
 *  GET Routes
 * ********************************* */
@@ -18,5 +17,12 @@ router.get("/login",
 router.get("/register",
     utilities.handleErrors(accountController.buildRegister)
     );
+
+
+/*  **********************************
+*  POST Routes
+* ********************************* */
+
+router.post('/register', utilities.handleErrors(accountController.registerAccount))
 
   module.exports = router;
