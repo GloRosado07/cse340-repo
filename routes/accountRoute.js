@@ -43,6 +43,12 @@ router.post(
     }
   )
 
+  // Process the registration data
+router.post(
+    "/register",
+    utilities.handleErrors(accountController.registerAccount)
+  )
+
 router.post('/register', utilities.handleErrors(accountController.registerAccount))
 
   module.exports = router;

@@ -102,8 +102,23 @@ Util.buidErrorView = async function(message){
   return background
 }
 
+
 /* **************************************
-* Build the classification list
+* Build the management view week4
+* ************************************ */
+Util.buildManagementView = async function(){
+  let manageItems = '<div class=manageItems>'
+
+  manageItems += '<a href="./inv/inventory/add-classification">Add New Classification</a>'
+  manageItems += '<br>'
+  manageItems += '<a href="./inv/inventory/add-inventory">Add New Vehicle</a>'
+  
+  manageItems += '</div>'
+  return manageItems
+}
+
+/* **************************************
+* Build the classification list week3
 * ************************************ */
 Util.buildClassificationList = async function (classification_id = null) {
   let data = await invModel.getClassifications()
@@ -124,8 +139,21 @@ Util.buildClassificationList = async function (classification_id = null) {
   return classificationList
 }
 
+
+ /* ****************************************
+ *  Check Login
+ * ************************************ */
+ Util.checkLogin = (req, res, next) => {
+  if (res.locals.loggedin) {
+    next()
+  } else {
+    req.flash("notice", "Please log in.")
+    return res.redirect("/account/login")
+  }
+ }
+
 /* ****************************************
- * Word functions
+ * Word functions week3
  **************************************** */
 function capitalizeWord(string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
