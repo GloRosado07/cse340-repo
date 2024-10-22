@@ -55,7 +55,7 @@ router.post(
 // Route to add a vehicle
 router.post(
     "/inventory/add-inventory",
-    utilities.checkLogin, //week4
+    //utilities.checkLogin, //week4
     utilities.handleErrors(invController.addVehicle)
 );
 
