@@ -62,7 +62,7 @@ router.post(
 // Route to add a review
 router.post(
     "/review/add-review/:invId",
-    utilities.checkLogin,
+    //utilities.checkLogin,
     utilities.handleErrors(invController.addReview)
 );
 
