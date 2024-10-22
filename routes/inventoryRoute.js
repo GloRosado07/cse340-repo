@@ -46,7 +46,7 @@ router.get("/getInventory/:classification_id", utilities.handleErrors(invControl
 // Route for register a new classification
 router.post(
     "/inventory/add-classification",
-    utilities.checkLogin,  
+    //utilities.checkLogin,  
     utilities.handleErrors(invController.addClassification)
 );
 
