@@ -136,9 +136,6 @@ async function updateVehicle(
   }
 }
 
-
-
-
 module.exports = {getClassifications, 
   getInventoryByClassificationId, 
   getCarDetailsByInvId,

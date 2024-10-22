@@ -110,7 +110,6 @@ invCont.buildAddVehicleView = async function (req, res, next) {
     title:"Add Inventory",
     errors: null,
     nav,
- 
     classificationList,
   })
 }
