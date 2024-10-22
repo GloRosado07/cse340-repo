@@ -10,7 +10,7 @@ const utilities = require("../utilities/")
 
 // Route to inventory management
 router.get("/", 
-    utilities.checkLogin,
+    //utilities.checkLogin,
     utilities.handleErrors(invController.buildManagementView)
 );
 
@@ -62,7 +62,7 @@ router.post(
 // Route to add a review
 router.post(
     "/review/add-review/:invId",
-    utilities.checkLogin,
+    //utilities.checkLogin,
     utilities.handleErrors(invController.addReview)
 );
 
