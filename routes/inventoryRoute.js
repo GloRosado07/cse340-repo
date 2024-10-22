@@ -59,6 +59,12 @@ router.post(
     utilities.handleErrors(invController.addVehicle)
 );
 
+// Route to add a review
+router.post(
+    "/review/add-review/:invId",
+    utilities.checkLogin,
+    utilities.handleErrors(invController.addReview)
+);
 
 
 module.exports = router;
