@@ -31,7 +31,7 @@ router.get("/inventory/add-classification",
 
 // Route to build add vehicle view
 router.get("/inventory/add-inventory",
-    utilities.checkLogin,
+    //utilities.checkLogin,
     utilities.handleErrors(invController.buildAddVehicleView)
     );
 
@@ -46,7 +46,7 @@ router.get("/getInventory/:classification_id", utilities.handleErrors(invControl
 // Route for register a new classification
 router.post(
     "/inventory/add-classification",
-    utilities.checkLogin,  
+    //utilities.checkLogin,  
     utilities.handleErrors(invController.addClassification)
 );
 
@@ -55,7 +55,7 @@ router.post(
 // Route to add a vehicle
 router.post(
     "/inventory/add-inventory",
-    utilities.checkLogin, //week4
+    //utilities.checkLogin, //week4
     utilities.handleErrors(invController.addVehicle)
 );
 
