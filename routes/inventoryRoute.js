@@ -66,7 +66,7 @@ router.post(
 // Update vehicle data
 router.post(
     "/update/",
-    utilities.checkLogin,
+    //utilities.checkLogin,
     utilities.handleErrors(invController.updateInventory))
 
 
